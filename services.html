@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Sana Ansari</title>
+
+
+    <style>
+
+        /* ================= RESET ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+
+        /* ================= BODY ================= */
+
+        body {
+
+            min-height: 100vh;
+
+            color: #ffffff;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    rgba(104, 76, 180, 0.35),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(0, 170, 180, 0.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #151b35,
+                    #10182d
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+
+            width: 100%;
+
+            padding: 22px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(10, 15, 35, 0.75);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+
+        /* ================= LOGO ================= */
+
+        .logo h2 {
+
+            font-size: 25px;
+
+            letter-spacing: 1px;
+
+            color: #ffffff;
+        }
+
+
+        .logo p {
+
+            font-size: 13px;
+
+            color: #b7bdd4;
+
+            margin-top: 3px;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+
+            position: relative;
+
+            text-decoration: none;
+
+            color: #d9dced;
+
+            margin-left: 25px;
+
+            font-size: 13px;
+
+            padding: 5px 0;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #c9a7ff;
+        }
+
+
+        /* ACTIVE SERVICE PAGE */
+
+        nav a.active {
+
+            color: #c9a7ff;
+        }
+
+
+        nav a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -5px;
+
+            width: 100%;
+
+            height: 2px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+        }
+
+
+        /* ================= MAIN ================= */
+
+        .inner-page {
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 60px 0 80px;
+        }
+
+
+        /* ================= PAGE TITLE ================= */
+
+        .page-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .page-title h1 {
+
+            font-size: 38px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #c9a7ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .line {
+
+            width: 85px;
+
+            height: 3px;
+
+            margin:
+                0 auto 14px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+        }
+
+
+        .page-title p {
+
+            color: #aeb6d0;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= SERVICES GRID ================= */
+
+        .services-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+        }
+
+
+        /* ================= SERVICE CARD ================= */
+
+        .service-card {
+
+            position: relative;
+
+            min-height: 310px;
+
+            padding: 32px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.14);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.25);
+
+            overflow: hidden;
+
+            transition:
+                0.35s ease;
+        }
+
+
+        /* CARD HOVER */
+
+        .service-card:hover {
+
+            transform:
+                translateY(-9px);
+
+            border-color:
+                rgba(167,139,250,0.6);
+
+            box-shadow:
+                0 30px 60px
+                rgba(0,0,0,0.35);
+        }
+
+
+        /* ================= GLOW ================= */
+
+        .service-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+
+            height: 130px;
+
+            right: -60px;
+
+            top: -60px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(167,139,250,0.12);
+
+            filter:
+                blur(20px);
+
+            transition: 0.4s;
+        }
+
+
+        .service-card:hover::after {
+
+            transform:
+                scale(1.5);
+        }
+
+
+        /* ================= ICON ================= */
+
+        .service-icon {
+
+            width: 62px;
+
+            height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 16px;
+
+            font-size: 28px;
+
+            margin-bottom: 25px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(167,139,250,0.25),
+                    rgba(94,234,212,0.15)
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            transition:
+                0.3s;
+        }
+
+
+        .service-card:hover .service-icon {
+
+            transform:
+                scale(1.08)
+                rotate(3deg);
+        }
+
+
+        /* ================= SERVICE TITLE ================= */
+
+        .service-card h2 {
+
+            font-size: 20px;
+
+            margin-bottom: 14px;
+
+            color: #ffffff;
+        }
+
+
+        /* ================= SERVICE DESCRIPTION ================= */
+
+        .service-card p {
+
+            color: #aeb6d0;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= BOTTOM LINE ================= */
+
+        .service-line {
+
+            width: 50px;
+
+            height: 3px;
+
+            margin-top: 25px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+
+            transition:
+                0.3s;
+        }
+
+
+        .service-card:hover .service-line {
+
+            width: 90px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #8f97b2;
+
+            font-size: 13px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(5,10,25,0.5);
+        }
+
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 950px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+
+            nav a {
+
+                margin:
+                    6px 10px;
+            }
+
+
+            .services-container {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            .services-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 30px;
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+                margin:
+                    5px 6px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                SANA ANSARI
+            </h2>
+
+            <p>
+                Personal Portfolio
+            </p>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT ME
+            </a>
+
+            <a href="services.html"
+               class="active">
+                SERVICES
+            </a>
+
+            <a href="skills.html">
+                SKILL
+            </a>
+
+            <a href="experience.html">
+                EXPERIENCE
+            </a>
+
+            <a href="works.html">
+                WORKS
+            </a>
+
+            <a href="contact.html">
+                CONTACT US
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <main class="inner-page">
+
+
+        <div class="page-title">
+
+            <h1>
+                MY SERVICES
+            </h1>
+
+            <div class="line"></div>
+
+            <p>
+                What I can do
+            </p>
+
+        </div>
+
+
+
+        <div class="services-container">
+
+
+            <!-- ================= SERVICE 1 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h2>
+                    Web Development
+                </h2>
+
+                <p>
+                    I can develop responsive and
+                    user-friendly websites using
+                    HTML, CSS, JavaScript and PHP.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 2 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h2>
+                    Web Design
+                </h2>
+
+                <p>
+                    I can create clean, attractive
+                    and modern website interfaces
+                    with a focus on user experience.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 3 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙️
+                </div>
+
+                <h2>
+                    Programming
+                </h2>
+
+                <p>
+                    I can develop practical programming
+                    applications using Python and C++
+                    with structured and logical solutions.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 4 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🗄️
+                </div>
+
+                <h2>
+                    Database Management
+                </h2>
+
+                <p>
+                    I have knowledge of database concepts
+                    and can work with MySQL for storing,
+                    managing and retrieving data.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 5 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h2>
+                    Data & Excel Management
+                </h2>
+
+                <p>
+                    I can organize digital records,
+                    create reports and manage data
+                    using Microsoft Excel and formulas.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 6 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h2>
+                    Application Development
+                </h2>
+
+                <p>
+                    I can develop basic mobile applications
+                    using Flutter and Dart with interactive
+                    pages and user-friendly interfaces.
+                </p>
+
+                <div class="service-line"></div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Sana Ansari. All Rights Reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

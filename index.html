@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sana Ansari | Portfolio</title>
+
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            min-height: 100vh;
+
+            color: #ffffff;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    rgba(104, 76, 180, 0.35),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(0, 170, 180, 0.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #151b35,
+                    #10182d
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+
+            width: 100%;
+
+            padding: 22px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(10, 15, 35, 0.75);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.12);
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+
+        /* LOGO */
+
+        .logo h2 {
+
+            font-size: 25px;
+
+            letter-spacing: 1px;
+
+            color: #ffffff;
+        }
+
+
+        .logo p {
+
+            font-size: 13px;
+
+            color: #aeb6d0;
+
+            margin-top: 3px;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #d9dced;
+
+            margin-left: 25px;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover,
+        nav a.active {
+
+            color: #c9a7ff;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            min-height: 650px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+
+        /* HERO CONTENT */
+
+        .hero-content {
+
+            flex: 1;
+        }
+
+
+        .welcome {
+
+            color: #5eead4;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 65px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 8px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #c9a7ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero-content h2 {
+
+            font-size: 25px;
+
+            color: #c9a7ff;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-description {
+
+            max-width: 570px;
+
+            color: #aeb6d0;
+
+            line-height: 1.8;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            padding: 13px 30px;
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #14b8a6
+                );
+
+            box-shadow:
+                0 8px 25px
+                rgba(139,92,246,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(139,92,246,0.4);
+        }
+
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+
+            flex: 0 0 390px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .hero-image img {
+
+            width: 350px;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            padding: 8px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #a78bfa,
+                    #5eead4
+                );
+
+            box-shadow:
+                0 0 50px
+                rgba(139,92,246,0.25);
+
+            transition: 0.4s;
+        }
+
+
+        .hero-image img:hover {
+
+            transform: scale(1.04);
+
+            box-shadow:
+                0 0 70px
+                rgba(139,92,246,0.4);
+        }
+
+
+        /* =========================
+           ABOUT PREVIEW
+        ========================= */
+
+        .about-preview {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 80px;
+
+            padding: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 55px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.25);
+        }
+
+
+        /* ABOUT IMAGE */
+
+        .preview-image {
+
+            flex: 0 0 260px;
+        }
+
+
+        .preview-image img {
+
+            width: 250px;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            border:
+                2px solid
+                rgba(167,139,250,0.5);
+        }
+
+
+        /* ABOUT CONTENT */
+
+        .preview-content {
+
+            flex: 1;
+        }
+
+
+        .preview-content h2 {
+
+            font-size: 28px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .line {
+
+            width: 75px;
+
+            height: 3px;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+        }
+
+
+        .preview-content h3 {
+
+            font-size: 21px;
+
+            color: #c9a7ff;
+
+            margin-bottom: 15px;
+        }
+
+
+        .preview-content p {
+
+            color: #aeb6d0;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+
+            max-width: 600px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #8f97b2;
+
+            font-size: 13px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(5,10,25,0.5);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+
+            nav {
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                margin: 6px 10px;
+            }
+
+
+            .hero {
+
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                padding: 70px 0;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 48px;
+            }
+
+
+            .hero-description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-image {
+
+                flex: none;
+            }
+
+
+            .hero-image img {
+
+                width: 280px;
+
+                height: 280px;
+            }
+
+
+            .about-preview {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .preview-content .line {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+            .logo {
+
+                text-align: center;
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+                margin: 5px 6px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 38px;
+            }
+
+
+            .hero-content h2 {
+
+                font-size: 20px;
+            }
+
+
+            .hero-image img {
+
+                width: 230px;
+
+                height: 230px;
+            }
+
+
+            .about-preview {
+
+                padding: 30px 20px;
+            }
+
+
+            .preview-image img {
+
+                width: 200px;
+
+                height: 200px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <h2>Sana Ansari</h2>
+
+            <p>Personal Portfolio</p>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="active">
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT ME
+            </a>
+
+            <a href="services.html">
+                SERVICES
+            </a>
+
+            <a href="skills.html">
+                SKILL
+            </a>
+
+            <a href="experience.html">
+                EXPERIENCE
+            </a>
+
+            <a href="works.html">
+                WORKS
+            </a>
+
+            <a href="contact.html">
+                CONTACT US
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+
+            <p class="welcome">
+
+                WELCOME TO MY PORTFOLIO
+
+            </p>
+
+
+            <h1>
+
+                SANA ANSARI
+
+            </h1>
+
+
+            <h2>
+
+                Web Developer & IT Student
+
+            </h2>
+
+
+            <p class="hero-description">
+
+                Hi, I am Sana Ansari, an Information Technology
+                student passionate about web development,
+                programming and creating modern websites.
+
+            </p>
+
+
+            <a href="contact.html" class="btn">
+
+                HIRE ME
+
+            </a>
+
+
+        </div>
+
+
+
+        <div class="hero-image">
+
+            <img
+                src="Photo.jpeg"
+                alt="Sana Ansari"
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT PREVIEW
+    ========================= -->
+
+    <section class="about-preview">
+
+
+        <div class="preview-image">
+
+            <img
+                src="Photo.jpeg"
+                alt="Sana Ansari"
+            >
+
+        </div>
+
+
+
+        <div class="preview-content">
+
+
+            <h2>
+
+                ABOUT ME
+
+            </h2>
+
+
+            <div class="line"></div>
+
+
+            <h3>
+
+                I am an IT Student & Web Developer
+
+            </h3>
+
+
+            <p>
+
+                I am interested in web development,
+                programming and creating attractive
+                digital experiences.
+
+            </p>
+
+
+            <a href="about.html" class="btn">
+
+                READ MORE
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Sana Ansari. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

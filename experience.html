@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Experience | Sana Ansari</title>
+
+
+    <style>
+
+        /* =====================================================
+           BASIC RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+        }
+
+
+        /* =====================================================
+           BODY
+        ===================================================== */
+
+        body {
+
+            min-height: 100vh;
+
+            color: #ffffff;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    rgba(104, 76, 180, 0.35),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(0, 170, 180, 0.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #151b35,
+                    #10182d
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+
+            width: 100%;
+
+            padding: 22px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(10, 15, 35, 0.75);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+
+        /* LOGO */
+
+        .logo h2 {
+
+            font-size: 25px;
+
+            letter-spacing: 1px;
+
+            color: #ffffff;
+        }
+
+
+        .logo p {
+
+            font-size: 13px;
+
+            color: #aeb6d0;
+
+            margin-top: 3px;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #d9dced;
+
+            margin-left: 25px;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #c9a7ff;
+        }
+
+
+        nav a.active {
+
+            color: #c9a7ff;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ===================================================== */
+
+        .inner-page {
+
+            width: 90%;
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            padding: 65px 0 80px;
+        }
+
+
+        /* =====================================================
+           PAGE TITLE
+        ===================================================== */
+
+        .page-title {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+
+        .page-title h1 {
+
+            font-size: 38px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #c9a7ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .page-title .line {
+
+            width: 85px;
+
+            height: 3px;
+
+            margin:
+                0 auto 14px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+        }
+
+
+        .page-title p {
+
+            color: #aeb6d0;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE CONTAINER
+        ===================================================== */
+
+        .experience-container {
+
+            position: relative;
+
+            padding-left: 45px;
+        }
+
+
+        /* =====================================================
+           TIMELINE LINE
+        ===================================================== */
+
+        .experience-container::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 13px;
+
+            top: 10px;
+
+            bottom: 10px;
+
+            width: 2px;
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    #a78bfa,
+                    #5eead4
+                );
+
+            opacity: 0.7;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE BOX
+        ===================================================== */
+
+        .experience-box {
+
+            position: relative;
+
+            display: flex;
+
+            gap: 35px;
+
+            padding: 35px;
+
+            margin-bottom: 35px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.13);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .experience-box:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(167,139,250,0.5);
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,0.35);
+        }
+
+
+        /* =====================================================
+           TIMELINE DOT
+        ===================================================== */
+
+        .experience-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -39px;
+
+            top: 38px;
+
+            width: 16px;
+
+            height: 16px;
+
+            border-radius: 50%;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #a78bfa,
+                    #5eead4
+                );
+
+            border:
+                3px solid #11182d;
+
+            box-shadow:
+                0 0 18px
+                rgba(167,139,250,0.6);
+        }
+
+
+        /* =====================================================
+           EXPERIENCE DATE
+        ===================================================== */
+
+        .experience-date {
+
+            min-width: 175px;
+
+            height: fit-content;
+
+            padding: 10px 15px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: #ffffff;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,0.35),
+                    rgba(20,184,166,0.2)
+                );
+
+            border:
+                1px solid
+                rgba(167,139,250,0.3);
+        }
+
+
+        /* =====================================================
+           EXPERIENCE CONTENT
+        ===================================================== */
+
+        .experience-content {
+
+            flex: 1;
+        }
+
+
+        .experience-content h2 {
+
+            font-size: 24px;
+
+            color: #ffffff;
+
+            margin-bottom: 7px;
+        }
+
+
+        .experience-content h3 {
+
+            font-size: 17px;
+
+            color: #c9a7ff;
+
+            margin-bottom: 22px;
+        }
+
+
+        .experience-content p {
+
+            position: relative;
+
+            color: #aeb6d0;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            margin-bottom: 12px;
+
+            padding-left: 20px;
+        }
+
+
+        /* BULLET */
+
+        .experience-content p::before {
+
+            content: "◆";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 2px;
+
+            font-size: 9px;
+
+            color: #5eead4;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #8f97b2;
+
+            font-size: 13px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(5,10,25,0.5);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+
+            nav {
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                margin:
+                    6px 10px;
+            }
+
+
+            .experience-container {
+
+                padding-left: 35px;
+            }
+
+
+            .experience-box {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+                padding: 30px;
+            }
+
+
+            .experience-date {
+
+                width: fit-content;
+
+                min-width: auto;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 500px) {
+
+            .logo {
+
+                text-align: center;
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+                margin:
+                    5px 6px;
+            }
+
+
+            .inner-page {
+
+                width: 92%;
+
+                padding:
+                    45px 0 60px;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 30px;
+            }
+
+
+            .experience-container {
+
+                padding-left: 25px;
+            }
+
+
+            .experience-container::before {
+
+                left: 6px;
+            }
+
+
+            .experience-box {
+
+                padding: 25px 20px;
+            }
+
+
+            .experience-box::before {
+
+                left: -28px;
+
+                width: 13px;
+
+                height: 13px;
+            }
+
+
+            .experience-content h2 {
+
+                font-size: 20px;
+            }
+
+
+            .experience-content h3 {
+
+                font-size: 16px;
+            }
+
+
+            .experience-content p {
+
+                font-size: 14px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                Sana Ansari
+            </h2>
+
+            <p>
+                Personal Portfolio
+            </p>
+
+        </div>
+
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT ME
+            </a>
+
+            <a href="services.html">
+                SERVICES
+            </a>
+
+            <a href="skills.html">
+                SKILL
+            </a>
+
+            <a href="experience.html"
+               class="active">
+                EXPERIENCE
+            </a>
+
+            <a href="works.html">
+                WORKS
+            </a>
+
+            <a href="contact.html">
+                CONTACT US
+            </a>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE PAGE
+    ===================================================== -->
+
+    <main class="inner-page">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h1>
+                EXPERIENCE
+            </h1>
+
+            <div class="line"></div>
+
+            <p>
+                My professional experience
+            </p>
+
+        </div>
+
+
+
+        <!-- EXPERIENCE -->
+
+        <div class="experience-container">
+
+
+            <!-- EXPERIENCE 1 -->
+
+            <div class="experience-box">
+
+
+                <!-- DATE -->
+
+                <div class="experience-date">
+
+                    June 2025 - Present
+
+                </div>
+
+
+
+                <!-- CONTENT -->
+
+                <div class="experience-content">
+
+
+                    <h2>
+                        Lecturer & Administrative Support
+                    </h2>
+
+
+                    <h3>
+                        Akbar's Academy
+                    </h3>
+
+
+                    <p>
+                        Managed and maintained digital records
+                        for 40+ students using Microsoft Excel.
+                    </p>
+
+
+                    <p>
+                        Created structured reports, schedules,
+                        and attendance systems.
+                    </p>
+
+
+                    <p>
+                        Automated attendance tracking using
+                        Excel formulas, reducing manual effort.
+                    </p>
+
+
+                    <p>
+                        Ensured data accuracy, validation,
+                        and proper documentation workflows.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Sana Ansari. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

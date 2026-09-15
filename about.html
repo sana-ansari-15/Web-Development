@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Sana Ansari</title>
+
+
+    <style>
+
+        /* =====================================================
+           BASIC RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+        }
+
+
+        /* =====================================================
+           BODY
+        ===================================================== */
+
+        body {
+
+            min-height: 100vh;
+
+            color: #ffffff;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    rgba(104, 76, 180, 0.35),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(0, 170, 180, 0.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #151b35,
+                    #10182d
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+
+            width: 100%;
+
+            padding: 22px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(10, 15, 35, 0.75);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+
+        /* LOGO */
+
+        .logo h2 {
+
+            font-size: 25px;
+
+            letter-spacing: 1px;
+
+            color: #ffffff;
+        }
+
+
+        .logo p {
+
+            font-size: 13px;
+
+            color: #aeb6d0;
+
+            margin-top: 3px;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #d9dced;
+
+            margin-left: 25px;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #c9a7ff;
+        }
+
+
+        nav a.active {
+
+            color: #c9a7ff;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ===================================================== */
+
+        .inner-page {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 65px 0 80px;
+        }
+
+
+        /* =====================================================
+           PAGE TITLE
+        ===================================================== */
+
+        .page-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .page-title h1 {
+
+            font-size: 38px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #c9a7ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .page-title .line {
+
+            width: 85px;
+
+            height: 3px;
+
+            margin:
+                0 auto 14px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #a78bfa,
+                    #5eead4
+                );
+        }
+
+
+        .page-title p {
+
+            color: #aeb6d0;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           ABOUT CONTAINER
+        ===================================================== */
+
+        .about-full {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 60px;
+
+            padding: 50px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.13);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+
+        .about-full:hover {
+
+            border-color:
+                rgba(167,139,250,0.45);
+
+            transform:
+                translateY(-4px);
+        }
+
+
+        /* =====================================================
+           ABOUT PHOTO
+        ===================================================== */
+
+        .about-photo {
+
+            flex: 0 0 330px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .about-photo img {
+
+            width: 300px;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            padding: 7px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #a78bfa,
+                    #5eead4
+                );
+
+            box-shadow:
+
+                0 0 50px
+                rgba(139,92,246,0.25);
+
+            transition: 0.4s;
+        }
+
+
+        .about-photo img:hover {
+
+            transform:
+                scale(1.04);
+
+            box-shadow:
+
+                0 0 70px
+                rgba(139,92,246,0.45);
+        }
+
+
+        /* =====================================================
+           ABOUT TEXT
+        ===================================================== */
+
+        .about-text {
+
+            flex: 1;
+        }
+
+
+        .about-text h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+
+            color: #ffffff;
+        }
+
+
+        .about-text h3 {
+
+            font-size: 19px;
+
+            color: #c9a7ff;
+
+            margin-bottom: 25px;
+        }
+
+
+        .about-text p {
+
+            color: #aeb6d0;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 16px;
+        }
+
+
+        /* =====================================================
+           RESUME BUTTON
+        ===================================================== */
+
+        .btn {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #14b8a6
+                );
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(139,92,246,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+
+                0 12px 30px
+                rgba(139,92,246,0.4);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #8f97b2;
+
+            font-size: 13px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(5,10,25,0.5);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+
+            nav {
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                margin:
+                    6px 10px;
+            }
+
+
+            .about-full {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 40px 30px;
+            }
+
+
+            .about-photo {
+
+                flex: none;
+            }
+
+
+            .about-text .btn {
+
+                margin-top: 20px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 500px) {
+
+            .logo {
+
+                text-align: center;
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+                margin:
+                    5px 6px;
+            }
+
+
+            .inner-page {
+
+                width: 92%;
+
+                padding:
+                    45px 0 60px;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 30px;
+            }
+
+
+            .about-full {
+
+                padding:
+                    30px 20px;
+            }
+
+
+            .about-photo img {
+
+                width: 220px;
+
+                height: 220px;
+            }
+
+
+            .about-text h2 {
+
+                font-size: 24px;
+            }
+
+
+            .about-text h3 {
+
+                font-size: 17px;
+            }
+
+
+            .about-text p {
+
+                font-size: 14px;
+            }
+
+
+            .btn {
+
+                font-size: 12px;
+
+                padding:
+                    12px 22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header>
+
+
+        <div class="logo">
+
+            <h2>
+                Sana Ansari
+            </h2>
+
+            <p>
+                Personal Portfolio
+            </p>
+
+        </div>
+
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="about.html"
+               class="active">
+                ABOUT ME
+            </a>
+
+            <a href="services.html">
+                SERVICES
+            </a>
+
+            <a href="skills.html">
+                SKILL
+            </a>
+
+            <a href="experience.html">
+                EXPERIENCE
+            </a>
+
+            <a href="works.html">
+                WORKS
+            </a>
+
+            <a href="contact.html">
+                CONTACT US
+            </a>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ABOUT PAGE
+    ===================================================== -->
+
+    <main class="inner-page">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h1>
+                ABOUT ME
+            </h1>
+
+            <div class="line"></div>
+
+            <p>
+                Know more about me
+            </p>
+
+        </div>
+
+
+
+        <!-- ABOUT CONTENT -->
+
+        <div class="about-full">
+
+
+            <!-- PHOTO -->
+
+            <div class="about-photo">
+
+                <img
+                    src="Photo.jpeg"
+                    alt="Sana Ansari"
+                >
+
+            </div>
+
+
+
+            <!-- TEXT -->
+
+            <div class="about-text">
+
+
+                <h2>
+                    Hello, I'm Sana Ansari
+                </h2>
+
+
+                <h3>
+                    Information Technology Student
+                </h3>
+
+
+                <p>
+                    I am an Information Technology student
+                    with an interest in web development,
+                    programming and software development.
+                </p>
+
+
+                <p>
+                    I enjoy learning new technologies and
+                    building practical projects that solve
+                    real-world problems.
+                </p>
+
+
+                <p>
+                    My goal is to improve my technical skills
+                    and become a professional web developer.
+                </p>
+
+
+                <a
+                    href="Sana_Ansari_Resume.pdf"
+                    class="btn"
+                    download
+                >
+                    DOWNLOAD RESUME
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Sana Ansari. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
